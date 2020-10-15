@@ -1,0 +1,41 @@
+#cabecera{
+    color: rgb(252, 252, 252);
+    font-size: 10;
+}
+
+#mapa {
+    width: 100%;
+    height: 90%;
+}
+
+#mapa_card {
+    width: 95%;
+    height: 70%;
+}
+
+#map {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+#fila {
+    font-size: 90%;
+}
+
+#pagina {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+#derecha {
+    display: flex;
+    justify-content: flex-end;
+}
+
+ion-content{
+    --background: url('../../assets/pulv3.jpg') no-repeat center center / cover;
+  }

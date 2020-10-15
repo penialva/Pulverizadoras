@@ -1,0 +1,26 @@
+<ion-content no-scroll padding>
+  
+  <div id="pagina">
+    <ion-label id="titulo">Sistema de Trazabilidad Georreferenciado para la Aplicación de Agroquímicos</ion-label>
+  
+    <ion-card id="log">
+      <ion-item id="center">
+        <ion-label position="floating">Correo<ion-text color="danger">*</ion-text></ion-label>
+        <ion-input [(ngModel)]="usuario"></ion-input>
+      </ion-item>
+      <ion-item id="center">
+        <ion-label position="floating">Contraseña<ion-text color="danger">*</ion-text></ion-label>
+        <ion-input [(ngModel)]="contrasena" type="password"></ion-input>
+      </ion-item>
+      <ion-button (click)="button_click()">Ingresar</ion-button>
+      
+    </ion-card>
+  </div>
+
+</ion-content>
+<ion-footer>
+  <ion-item>
+    <ion-img src="../../assets/fiuner.jpg"></ion-img>
+    <ion-img src="../../assets/inta.gif"></ion-img>
+  </ion-item>
+</ion-footer>

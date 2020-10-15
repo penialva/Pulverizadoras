@@ -1,5 +1,7 @@
 {
   "name": "Pulverizadoras",
-  "integrations": {},
+  "integrations": {
+    "capacitor": {}
+  },
   "type": "angular"
 }

@@ -1,0 +1,123 @@
+<ion-header [translucent]="true">
+  <ion-toolbar id="cabecera" color="primary">
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/home"></ion-back-button>
+    </ion-buttons>
+    <ion-title>
+      Reporte Detallado
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true" id="pagina">
+  <ion-card>
+    <ion-card-header>
+      <ion-card-subtitle> 
+        Datos Aplicador
+      </ion-card-subtitle>
+    </ion-card-header>
+    <ion-card-content>
+      <ion-row>
+      <ion-col>
+        <ion-row>
+          <ion-label color="secondary">Pulverizadora</ion-label>
+        </ion-row>
+        <ion-row>
+          <ion-label>{{aplicacion.pulverizadora}}</ion-label>
+        </ion-row>
+        <ion-row>
+          <ion-label color="secondary">Receta</ion-label>
+        </ion-row>
+        <ion-row>
+          <ion-label>{{aplicacion.receta_aplicacion}}</ion-label>
+        </ion-row>
+      </ion-col>
+      <ion-col>
+        <ion-row>
+          <ion-label color="secondary">Operario</ion-label>
+        </ion-row>
+        <ion-row>
+          <ion-label>{{aplicacion.operario}}</ion-label>
+        </ion-row>
+        <ion-row>
+          <ion-label color="secondary">Producto</ion-label>
+        </ion-row>
+        <ion-row>
+          <ion-label>{{aplicacion.receta_espendio}}</ion-label>
+        </ion-row>
+      </ion-col>
+    </ion-row>
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card id="mapa_card">
+  <ion-card-header>
+    <ion-card-subtitle> 
+      Mapa de Aplicación 
+    </ion-card-subtitle>
+  </ion-card-header>
+    <ion-card-content id="map">
+      <div id="mapa"></div>
+    </ion-card-content> 
+  </ion-card>
+
+  <ion-card>
+  <ion-card-header>
+    <ion-card-subtitle> 
+      Resumen de Aplicación
+    </ion-card-subtitle>
+  </ion-card-header>
+  <ion-card-content>
+    <ion-list id="datos">
+      <ion-item id="fila">
+        <ion-col size="7">
+          <ion-label color="secondary">Fecha</ion-label>
+        </ion-col>
+        <ion-col id="derecha">
+          <ion-label>{{fecha}}</ion-label> 
+        </ion-col>        
+      </ion-item>
+      <ion-item id="fila">
+        <ion-col size="7">
+          <ion-label color="secondary">Hora Inicio</ion-label>
+        </ion-col>
+        <ion-col id="derecha">
+          <ion-label>{{hora_inicio}}</ion-label> 
+        </ion-col>
+      </ion-item>
+      <ion-item id="fila">
+        <ion-col size="7">
+          <ion-label color="secondary">Hora Fin</ion-label>
+        </ion-col>    
+        <ion-col id="derecha">
+           <ion-label>{{hora_fin}}</ion-label> 
+        </ion-col>           
+      </ion-item>
+      <ion-item id="fila">
+        <ion-col size="7">
+          <ion-label color="secondary">Temperatura Promedio</ion-label>
+        </ion-col>
+        <ion-col id="derecha">
+          <ion-label>{{temp_prom}}ºC</ion-label> 
+        </ion-col>
+      </ion-item>
+      <ion-item id="fila">
+        <ion-col size="7">
+          <ion-label color="secondary">Humedad Promedio</ion-label>
+        </ion-col> 
+        <ion-col id="derecha">
+          <ion-label>{{hum_prom}}%</ion-label>
+        </ion-col>       
+      </ion-item>
+      <ion-item id="fila">
+        <ion-col size="7">
+          <ion-label color="secondary">Velocidad Promedio</ion-label>
+        </ion-col>     
+        <ion-col id="derecha">
+          <ion-label>{{vel_prom}}km/h</ion-label> 
+        </ion-col>   
+      </ion-item>
+    </ion-list>
+  </ion-card-content>
+  </ion-card>
+</ion-content>

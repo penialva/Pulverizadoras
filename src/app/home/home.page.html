@@ -1,20 +1,59 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
+<ion-header>
+  <ion-toolbar id="cabecera" color="primary">
     <ion-title>
-      Blank
+      Sistema de Trazabilidad para
+    </ion-title>
+    <ion-title>
+      Aplicación de Agroquímicos
     </ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
-    </ion-toolbar>
-  </ion-header>
-
-  <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
-  </div>
+  <ion-card>
+    <ion-card-header>
+      <ion-card-subtitle>
+        Lotes Procesados
+      </ion-card-subtitle>
+    </ion-card-header>
+    <ion-card-content>
+      <ion-list>
+        <ion-item id="fila">
+          <ion-col size="3.2" id="centrado">
+            <ion-label color='secondary'>Fecha</ion-label>
+          </ion-col>
+          <ion-col id="centrado">
+            <ion-label color='secondary'>Equipo</ion-label>
+          </ion-col>
+          <ion-col id="centrado">
+            <ion-label color='secondary'>Receta</ion-label>
+          </ion-col>
+          <ion-col id="centrado">
+            <ion-label color='secondary'>Producto</ion-label>
+          </ion-col>
+          <ion-col id="centrado">
+            <ion-label color='secondary'>Alarmas</ion-label>
+          </ion-col>
+        </ion-item>
+        <ion-item *ngFor="let aplic of aplicaciones" [routerLink]="['/home', aplic.id]">
+          <ion-col size="3.2" id="centrado">
+            <ion-label>{{aplic.datos_aplicacion[0].fecha}}</ion-label>
+          </ion-col>
+          <ion-col id="centrado">
+            <ion-label>{{aplic.pulverizadora}}</ion-label>
+          </ion-col>
+          <ion-col id="centrado">
+            <ion-label>{{aplic.receta_espendio}}</ion-label>
+          </ion-col>
+          <ion-col id="centrado">
+            <ion-label>{{aplic.receta_aplicacion}}</ion-label>
+          </ion-col>
+          <ion-col id="centrado">
+            <ion-icon *ngIf="hayAlarmas(aplic)" color="warning" name="warning" id="icono"></ion-icon>
+            <ion-icon *ngIf="hayAlarmas(aplic)==false" color="success" name="checkmark-circle-outline" id="icono"></ion-icon>
+          </ion-col>
+        </ion-item>
+      </ion-list>
+    </ion-card-content>
+  </ion-card>
 </ion-content>
